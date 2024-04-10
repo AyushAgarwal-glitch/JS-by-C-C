@@ -49,3 +49,4 @@ let boolSt = Boolean(st)
 console.log(boolSt)*/
 console.log("TypeOf NaN -> ")
 console.log(typeof NaN)
+//typeof NaN is number 
