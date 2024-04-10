@@ -50,3 +50,32 @@ console.log(boolSt)*/
 console.log("TypeOf NaN -> ")
 console.log(typeof NaN)
 //typeof NaN is number 
+
+
+// ***************************Operations****************************
+let val = 33 
+let negVal = -val 
+console.log(negVal)
+console.log(2+2)
+console.log(2-2)
+console.log(2*2)
+console.log(2**3) // 2 to the power 3
+console.log(2/3)
+console.log(2%3)
+
+let str = "Hello"
+let str2 = " Ayush"
+console.log(str + str2)
+
+console.log("1" + 2)      //12
+console.log(1 + "2")      //12
+console.log("1" + 2 + 2)  //122
+console.log(3 + 5 + "4")  //84
+
+console.log(+true)       //1
+console.log(+"")         //0
+
+let num1, num2, num3
+num1 = num2 = num3 = 2 + 2 //all have the value 4 but bad readibility
+
+//++prefix and postfix++ see from mdn docs 
