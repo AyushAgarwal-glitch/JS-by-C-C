@@ -47,3 +47,5 @@ Boolean(anything u want to convert in true or false
 /*let st = 5443
 let boolSt = Boolean(st)
 console.log(boolSt)*/
+console.log("TypeOf NaN -> ")
+console.log(typeof NaN)
