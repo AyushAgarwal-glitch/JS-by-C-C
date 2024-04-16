@@ -55,3 +55,31 @@ console.log(Object.values(tinderUser))
 
 console.log(tinderUser.hasOwnProperty("id"));
 console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+const course = {
+    courseName: "JS" ,
+    price: "free",
+    courseTeacher: "Hitesh"
+}
+
+// course.courseTeacher
+const {courseTeacher: cT} = course
+// console.log(courseTeacher) ;
+console.log(cT) ;
+
+/*const navbar = ({company}) => {
+                                    //destructuring of object is being done
+}                                   //react mei useful hoga
+navbar(company = "ayush")*/
+
+/*{
+    "name": "ayush",         //in JSON object the keys are also inside double quotes
+    "coursename": "js",      //This is a JSON object, when data is retrieved it is stored in JSON object
+    "price": "free"
+}*/
+
+/*[
+    {},  //this is JSON objects in array format
+    {},
+    {}
+]*/
