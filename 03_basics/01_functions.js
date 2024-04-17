@@ -33,3 +33,30 @@ function loginMSG(username = "sam"){  //here sam is the default value which will
 console.log(loginMSG("ayush"))
 console.log(loginMSG(""))
 console.log(loginMSG()) //undefined aata hai
+
+
+//function calculateCartPrice(...num1){ //over here "..." this is the rest operator , it takes the values and convert it to an array
+function calculateCartPrice(val1 , val2 , ...num1){ //over here the first 2 values are taken by val1 and val2 and rest values are stored in num1 as an array
+    return num1
+}
+console.log(calculateCartPrice(200,300,500,900,1600))
+
+const user = {
+    username: "xyz" ,
+    price: "199"
+}
+function handleObject(anyObject) {
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`)
+}
+handleObject(user) 
+handleObject({ //direct object bhi paas kr skte hain
+    username: "abc",
+    price: 400
+})
+
+//we can pass arrays as well in the function
+const myNewArray = [200 , 400 , 100 , 600]
+function returnSecondValue(getArray){
+    return getArray[1] 
+}
+console.log(returnSecondValue(myNewArray))
