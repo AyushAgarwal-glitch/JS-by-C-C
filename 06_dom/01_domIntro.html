@@ -9,6 +9,11 @@
     <div class="bg-black">
         <h1 id="title" class="heading">DOM learning <span style="display: none;">test text</span></h1>
         <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
     </div>
 </body>
 </html>
@@ -29,7 +34,35 @@ title.innerHTML => 'DOM learning'
 title.innerText => 'DOM learning'
 //all these methods give the content of the element but what is the difference between these methods
 // now after using the display in span 
-title.innerText => 'DOM learning'
-title.textContent => 'DOM learning test text'
+title.innerText => 'DOM learning' //gives the text which is displayed on the screen
+title.textContent => 'DOM learning test text' // gives the whole text which might be hidden also
+title.innerHTML => will give the full value i.e. if any html would be written inside the element then that will also be shown
+
+document.getElementByClassName('heading')//gives className and addresses the functionalities with the help of class name
+
+document.querySelector('h1') // selects the first h1 tag and operations are performed on it
+document.querySelector('#id') // selects a tag by its id
+document.querySelector('.class') // selects a tag by its class name
+-->
+const myul = document.querySelector('ul')
+myul.querySelector('li')
+const turnGreen = myul.querySelector('li') // gives the first item of the unordered list
+turnGreen.style.backgroundColor = 'green' //turns the first element of the list to green color 
+//we can give other styles using the same syntax 
+
+document.querySelectorAll('li') // selects all the li tags and gives the list elements in the form of a NodeList and we can use the functions as shown in the prototypes 
+const tempLiList = document.querySelectorAll('li') //tempLiList is the NodeList of elements in the li
+tempLiList.style.color = 'green' // doesnt work this way bcoz it is a list 
+tempLiList[0].style.color = 'green' // converts the text color of the first list element to green
+tempLiList.forEach(function(l){
+    l.style.backgroundColor = 'green' //will convert all the list elements to green color
+})
+
+const tempClassList = document.getElementByClassName('list-item') // this gives an html collection of elements
+//loop cant be applied on this html list // so for accessing over the html lists we need to convert it to array
+const myConvertedArray = Array.from(tempClassList) // tempClassList will be converted to an array with the help of .from function
+myConvertedArray.forEach(function(l){
+    li.style.color = 'orange' // converts the list elements to orange color
+})
 
 -->
