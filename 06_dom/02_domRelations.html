@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D O M</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent); // gives the whole div element
+    console.log(parent.children); // this gives a html collection of all the child div's
+    console.log(parent.children[1].innerHTML) // we can access each div by giving its correct indexing // this gives "Tuesday"
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML) ;
+    }
+    parent.children[1].style.color = "orange"
+    console.log(parent.firstElementChild) ; //gives the first child of the parent element
+    console.log(parent.lastElementChild) ; // gives the last child of the parent element
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne) // dayOne has monday stored in it
+    console.log(dayOne.parentElement) // this can be used to access the parent if we know its child
+    console.log(dayOne.nextElementSibling) // gives tuesday
+
+    console.log("NODES: ", parent.childNodes) //gives a tree like structure with all the functions
+    
+</script>
+</html>
