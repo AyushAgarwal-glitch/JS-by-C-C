@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D O M</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLAng(langName){
+        const li = document.createElement('li') ;
+        li.innerHTML = `${langName}`
+        document.querySelector('.language')
+        appendChild(li)
+    }
+    addLAng("python")
+    addLAng("typescript")
+    //in this method we traverse the whole tree and then add the li item at the end of the list 
+
+    function addOptiLang(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang('golang')
+    //this method is optimized bcoz over here we dont need to traverse the whole tree , we cann just append at the end of the tree
+
+    //Edit the values
+    const secondLang = document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML = "Mojo"
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    //remove 
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove() 
+</script>
+</html>
